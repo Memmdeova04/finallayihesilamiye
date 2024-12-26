@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+}
+
+body {
+    font-family: "Parkinsans", sans-serif;
+    background-image: url("images/pexels-photo-3872365.jpeg");
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.about_section {
+    background-color: #ffffff;
+    padding: 100px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+}
+
+.home_button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home_button:hover {
+    background-color: #0056b3;
+}
+
+.about_container h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.about_container p {
+    font-size: 26px;
+    line-height: 2;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+.about_container p strong {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 20px 40px;
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .about_section {
+        padding: 70px;
+        max-width: 900px;
+    }
+
+    .home_button {
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+
+    .about_container h2 {
+        font-size: 40px;
+    }
+
+    .about_container p {
+        font-size: 22px;
+    }
+
+    button {
+        padding: 16px 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .about_section {
+        padding: 40px;
+        max-width: 100%;
+    }
+
+    .home_button {
+        position: relative;
+        margin-bottom: 20px; 
+        top: 0;
+        left: 0;
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    .about_container h2 {
+        font-size: 30px;
+        margin-top: 20px; 
+    }
+
+    .about_container p {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
+

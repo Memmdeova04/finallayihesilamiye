@@ -1,0 +1,205 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+}
+
+body {
+    font-family: "Parkinsans", sans-serif;
+    background-image: url("images/pexels-photo-1640777.jpeg");
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 700px;
+    position: relative;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+}
+.home-button:hover {
+    background-color: #0056b3;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+input, textarea {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+button {
+    padding: 18px 35px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#feedback-message {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f00;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .contact-section {
+        max-width: 80%; 
+        min-height: 600px; 
+        padding: 50px; 
+    }
+
+    .home-button {
+        font-size: 16px; 
+        padding: 10px 18px;
+        top: 15px;
+        left: 15px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    input, textarea {
+        padding: 18px; 
+        font-size: 18px; 
+    }
+
+    button {
+        padding: 16px 30px; 
+        font-size: 18px; 
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .contact-section {
+        max-width: 90%;
+        padding: 40px;
+        min-height: 550px;
+    }
+
+    .home-button {
+        font-size: 14px; 
+        padding: 8px 15px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h2 {
+        font-size: 24px; 
+        margin-bottom: 20px; 
+    }
+
+    label {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    input, textarea {
+        padding: 15px; 
+        font-size: 16px; 
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 15px 25px; 
+        font-size: 16px; 
+    }
+
+    #feedback-message {
+        font-size: 20px; 
+    }
+   .contact-container  {
+    margin-top: 30px;
+   }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 2000px) {
+    .contact-section {
+        
+        padding: 80px;
+        max-width: 1200px;
+        min-height: 800px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+
+    input, textarea {
+        padding: 25px;
+        font-size: 22px;
+    }
+
+    button {
+        padding: 20px 40px;
+        font-size: 22px;
+    }
+
+    .home-button {
+        font-size: 20px;
+        padding: 14px 24px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
