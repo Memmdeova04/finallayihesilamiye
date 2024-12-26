@@ -1,15 +1,22 @@
-const buttons = document.getElementById('toggle_button');
-const moreInfoo = document.getElementById('more_info');
-
-buttons.addEventListener('click', () => {
-    if (moreInfoo.style.display === 'none' || moreInfoo.style.display === '') {
-        moreInfoo.style.display = 'block';
-        buttons.textContent = 'Bağla'; 
-    } else {
-        moreInfoo.style.display = 'none'; 
-        buttons.textContent = 'Daha çox oxu'; 
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const expandButton = document.getElementById('expandButton');  
+    const description = document.getElementById('description');   
+    const aboutSection = document.getElementById('aboutSection'); 
+    
+    const additionalText = `
+        Bizim komandamız, qida sənayesində uzun illər təcrübəyə malik bir qrup mütəxəssisdən ibarətdir. 
+        Bizim əsas məqsədimiz həm dadlı, həm də sağlam yeməklər təqdim etməkdir. Bu veb sayt vasitəsilə siz 
+        ən sevdiyiniz yeməkləri daha asan hazırlamağı öyrənə bilərsiniz. Biz hər zaman daha yaxşısını təqdim etməyə çalışırıq!
+    `;  
+    expandButton.addEventListener('click', function() {
+        if (!aboutSection.classList.contains('expanded')) {
+            description.innerHTML += `<p>${additionalText}</p>`; 
+            aboutSection.classList.add('expanded'); 
+            expandButton.innerHTML = 'Daha az məlumat'; 
+        } else {
+            description.innerHTML = description.innerHTML.split('<p>')[0]; 
+            aboutSection.classList.remove('expanded'); 
+            expandButton.innerHTML = 'Daha çox məlumat';  
+        }
+    });
 });
-
-
-

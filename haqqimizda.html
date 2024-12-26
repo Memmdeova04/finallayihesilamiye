@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haqqımızda</title>
-    <link rel="stylesheet" href="haqqimizda.css">
+    <link rel="stylesheet" href="./haqqimizda.css"> 
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,27 +17,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="about_section">
-        <a href="index.html" class="home_button">Əsas Səhifə</a>
-        <div class="about_container">
-            <h2>Haqqımızda</h2>
-            <p id="summary_text">
-                "Yemək Reseptləri" veb-saytı geniş çeşiddə reseptlər təqdim etməyi hədəfləyir. 
-                Məqsədimiz, mətbəx sevərləri yaradıcı ideyalarla təmin etmək və hər kəsi dadlı təcrübələrə ilhamlandırmaqdır. 
-            </p>
-            <div id="more_info" style="display: none;">
-                <p>
-                    Saytımızda müxtəlif mətbəxlərdən reseptlər, praktiki məsləhətlər və istifadəçilərin rəy və tövsiyələrini tapa bilərsiniz. 
-                    Biz həm peşəkar aşpazları, həm də yeni başlayanları dəstəkləyirik. Hər bir resept addım-addım təlimatlarla 
-                    və izahlı məlumatlarla təqdim olunur.
-                </p>
-                <p>
-                    <strong>Məqsədimiz:</strong> Mətbəxdə hər kəsi müsbət və yaradıcı hisslərə ilhamlandırmaqdır.
-                </p>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Əsas Səhifə</a></li>
+                <li><a href="./contact.html">Əlaqə</a></li>
+                <li><a href="./teklifrey.html">Təklif və Rəy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="about_section" id="aboutSection">
+                <h1>Haqqımızda</h1>
+                <p id="description">Bizim veb səhifəmiz, sevdiyiniz yeməkləri asanlıqla hazırlamağınıza kömək etmək üçün yaradılıb. Hər kəsin yemək bişirməyi sevəcəyini düşünürük...</p>
+                <button id="expandButton">Daha çox məlumat</button>
             </div>
-            <button id="toggle_button">Daha çox oxu</button>
         </div>
     </section>
-    <script src="haqqimizda.js"></script>
+
+   
+    <script src="./haqqimizda.js"></script> 
 </body>
 </html>
+

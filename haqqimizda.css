@@ -1,137 +1,154 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100%; 
-}
 
 body {
     font-family: "Parkinsans", sans-serif;
-    background-image: url("images/pexels-photo-3872365.jpeg");
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #207fa4;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
+    height: 80vh; 
 }
-
-.about_section {
-    background-color: #ffffff;
-    padding: 100px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    max-width: 1200px;
+.container {
+    width: 80%;
+    max-width: 800px;
     text-align: center;
-    position: relative;
+}
+.about_section {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+.about_section h1 {
+    font-size: 2.5em;
+    color: #333;
 }
 
-.home_button {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background-color: #007bff;
+#description {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+#expandButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    font-size: 22px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.home_button:hover {
+#expandButton:hover {
     background-color: #0056b3;
 }
 
-.about_container h2 {
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: #2c3e50;
+.expanded {
+    max-height: 1000px;
+    padding-bottom: 30px;
 }
 
-.about_container p {
-    font-size: 26px;
-    line-height: 2;
-    margin-bottom: 30px;
-    color: #555555;
-}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .about {
+        padding: 20px; 
+        height: auto;  
+    }
 
-.about_container p strong {
-    color: #e67e22;
-    font-weight: bold;
-}
+    .about_section {
+        padding: 15px;
+        max-width: 100%;
+    }
 
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 20px 40px;
-    font-size: 22px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    .about_section h1 {
+        font-size: 2em; 
+    }
 
-button:hover {
-    background-color: #218838;
+    #description {
+        font-size: 1em; 
+    }
+
+    #expandButton {
+        padding: 8px 16px;
+        font-size: 14px; 
+    }
 }
 
 
 @media screen and (min-width: 601px) and (max-width: 991px) {
-    .about_section {
-        padding: 70px;
-        max-width: 900px;
+    .about {
+        padding: 20px; 
     }
 
-    .home_button {
-        padding: 15px 25px;
-        font-size: 20px;
+    .container {
+        width: 90%; 
     }
 
-    .about_container h2 {
-        font-size: 40px;
+    .about_section h1 {
+        font-size: 2.2em; 
     }
 
-    .about_container p {
-        font-size: 22px;
+    #description {
+        font-size: 1.1em; 
     }
 
-    button {
-        padding: 16px 30px;
-        font-size: 20px;
+    #expandButton {
+        font-size: 15px;
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 991px) and (max-width: 2000px) {
+    .about {
+        padding: 40px; 
+    }
+
     .about_section {
-        padding: 40px;
-        max-width: 100%;
+        padding: 25px;
     }
 
-    .home_button {
-        position: relative;
-        margin-bottom: 20px; 
-        top: 0;
-        left: 0;
-        padding: 12px 20px;
-        font-size: 18px;
+    .about_section h1 {
+        font-size: 2.5em; 
     }
 
-    .about_container h2 {
-        font-size: 30px;
-        margin-top: 20px; 
+    #description {
+        font-size: 1.2em; 
     }
 
-    .about_container p {
-        font-size: 18px;
-    }
-
-    button {
-        padding: 12px 20px;
-        font-size: 18px;
+    #expandButton {
+        font-size: 16px; 
     }
 }
-

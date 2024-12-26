@@ -7,7 +7,7 @@ html, body {
 
 body {
     font-family: "Parkinsans", sans-serif;
-    background-image: url("images/pexels-photo-1640777.jpeg");
+    background-image: url("./images/pexels-photo-1640777.jpeg");
     color: #333;
     display: flex;
     justify-content: center;
@@ -18,188 +18,179 @@ body {
     background-position: center; 
 }
 
-.contact-section {
-    background-color: #fff;
-    padding: 70px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1000px;
-    min-height: 700px;
-    position: relative;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
+.contact_form_container {
+    background-color: #ffffff;
+    padding: 20px 30px;
     border-radius: 8px;
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-}
-.home-button:hover {
-    background-color: #0056b3;
-}
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-h2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
 }
 
-.form-group {
+.contact_form_container h1 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 label {
-    font-size: 20px;
-    margin-bottom: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    color: #555555;
+    text-align: left;
 }
 
 input, textarea {
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    
 }
 
 button {
-    padding: 18px 35px;
+    padding: 10px;
     background-color: #28a745;
-    color: white;
+    color: #ffffff;
     border: none;
-    border-radius: 12px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 20px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #ccbd12;
 }
 
-#feedback-message {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #f00;
+.back_button {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#name {
+    width: 95%;
+}
+#email {
+    width: 95%;
+}
+
+#message {
+    width: 95%;
 }
 
 
 @media screen and (min-width: 601px) and (max-width: 991px) {
-    .contact-section {
-        max-width: 80%; 
-        min-height: 600px; 
-        padding: 50px; 
+    .contact_form_container {
+        max-width: 600px;
+        padding: 20px;
     }
 
-    .home-button {
-        font-size: 16px; 
-        padding: 10px 18px;
-        top: 15px;
-        left: 15px;
+    form {
+        gap: 10px;
     }
 
-    h2 {
-        font-size: 28px; 
+    label {
+        font-size: 16px;
     }
 
     input, textarea {
-        padding: 18px; 
-        font-size: 18px; 
+        font-size: 16px;
     }
 
     button {
-        padding: 16px 30px; 
-        font-size: 18px; 
+        font-size: 18px;
+        padding: 12px;
     }
 }
 
+/* Telefon ölçüləri üçün responsivlik */
 @media screen and (min-width: 300px) and (max-width: 600px) {
-    .contact-section {
+    .contact_form_container {
         max-width: 90%;
-        padding: 40px;
-        min-height: 550px;
+        padding: 15px;
     }
 
-    .home-button {
-        font-size: 14px; 
-        padding: 8px 15px;
-        top: 10px;
-        left: 10px;
+    .contact_form_container h1 {
+        font-size: 18px;
     }
 
-    h2 {
-        font-size: 24px; 
-        margin-bottom: 20px; 
+    form {
+        gap: 8px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .back_button {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 2000px) {
+    .contact-form-container {
+        max-width: 800px;
+        padding: 30px;
+    }
+
+    .contact-form-container h1 {
+        font-size: 24px;
+    }
+
+    form {
+        gap: 20px;
     }
 
     label {
         font-size: 18px;
-        margin-bottom: 10px;
     }
 
     input, textarea {
-        padding: 15px; 
-        font-size: 16px; 
-        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 15px;
     }
 
     button {
-        padding: 15px 25px; 
-        font-size: 16px; 
-    }
-
-    #feedback-message {
-        font-size: 20px; 
-    }
-   .contact-container  {
-    margin-top: 30px;
-   }
-}
-
-
-@media screen and (min-width: 992px) and (max-width: 2000px) {
-    .contact-section {
-        
-        padding: 80px;
-        max-width: 1200px;
-        min-height: 800px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    label {
-        font-size: 22px;
-    }
-
-    input, textarea {
-        padding: 25px;
-        font-size: 22px;
-    }
-
-    button {
-        padding: 20px 40px;
-        font-size: 22px;
-    }
-
-    .home-button {
         font-size: 20px;
-        padding: 14px 24px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        padding: 15px;
+    }
+
+    .back-button {
+        font-size: 16px;
     }
 }

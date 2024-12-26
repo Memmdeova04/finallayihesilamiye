@@ -14,13 +14,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-const apiKey = "d362c4f3bb3a40f2979f2f4fa3e32096"; // API açarını buraya daxil edin
+
+const apiKey = "d362c4f3bb3a40f2979f2f4fa3e32096"; 
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 const recipeTitle = document.getElementById('recipe-title');
 const recipeDescription = document.getElementById('recipe-description');
 
-// API URL
 const searchUrl = "https://api.spoonacular.com/recipes/complexSearch";
 const infoUrl = "https://api.spoonacular.com/recipes/";
 
@@ -28,27 +28,24 @@ searchButton.addEventListener('click', async () => {
     const query = searchInput.value.trim();
     if (query) {
         try {
-            // Axtarış edirik
+            
             const searchResponse = await fetch(`${searchUrl}?query=${query}&apiKey=${apiKey}`);
             const searchData = await searchResponse.json();
             
             if (searchData.results.length > 0) {
-                const recipe = searchData.results[0];  // İlk nəticə
-                const recipeId = recipe.id;  // Yeməyin ID-sini alırıq
+                const recipe = searchData.results[0];  
+                const recipeId = recipe.id; 
 
-                // Reseptin tam məlumatlarını əldə edirik
+                
                 const infoResponse = await fetch(`${infoUrl}${recipeId}/information?apiKey=${apiKey}`);
                 const recipeInfo = await infoResponse.json();
-
-                // Reseptin başlığını göstəririk
                 recipeTitle.textContent = recipeInfo.title;
 
-                // Təlimatlar varsa göstərin
                 const instructions = recipeInfo.instructions || "Resept haqqında məlumat yoxdur";
                 const cleanInstructions = instructions.replace(/<ol>|<\/ol>|<li>|<\/li>/g, '').trim();
                 const steps = cleanInstructions.split(/[.!?](?=\s*[A-Z]|\s*$)/).filter(step => step.trim());
 
-                // Mərhələləri göstər
+               
                 recipeDescription.innerHTML = steps.map(step => `<li>${step}</li>`).join('');
             } else {
                 recipeTitle.textContent = "Yemək tapılmadı";
@@ -63,42 +60,15 @@ searchButton.addEventListener('click', async () => {
 });
 
 
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const feedbackMessage = document.getElementById('feedback-message');
-
-    if (name && email && message) {
-        feedbackMessage.textContent = 'Mesajınız uğurla göndərildi. Təşəkkürlər!';
-        feedbackMessage.style.color = '#28a745';  
-    } else {
-        feedbackMessage.textContent = 'Xahiş edirik bütün sahələri doldurun.';
-        feedbackMessage.style.color = '#f00'; 
-    }
-});
-
-
-
 function animateButton() {
     const button = document.querySelector('.triangle-button');
     button.classList.add('animate');
     
     setTimeout(() => {
         button.classList.remove('animate');
-    }, 600);  // Animasiya müddəti
+    }, 600);  
   }
 
-
-
-
-
-
-
-  
   
 
   document.querySelectorAll(".neon-buttons button").forEach((button) => {
@@ -111,7 +81,7 @@ function animateButton() {
     });
   });
   
-  // Neon shimmer effect (optional)
+  
   setInterval(() => {
     const buttons = document.querySelectorAll(".neon-buttons button");
     buttons.forEach((button, i) => {
